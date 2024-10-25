@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">Taam Smaak</div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+        <div class="profile-section" id="profileSection">
+            <!-- This will be dynamically updated by JavaScript -->
+            <button id="loginButton" class="login-btn">Login</button>
+            <img id="profileIcon" class="profile-icon" src="profile-icon.png" alt="Profile" style="display: none;">
+        </div>
+    </nav>
+
+<div class="main-container">
+    <div class="sidebar">
+        <ul class="categories">
+            <li class="category-item" onclick="toggleSubmenu('productsSubmenu')">
+                Categories
+                <ul id="productsSubmenu" class="submenu" style="display:none;">
+                    <li onclick="showContent('products')">Products</li>
+                    <li>Orders</li>
+                    <li>Users</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div id="content-area">
+            <div class="welcome-note">Welcome to the Admin Dashboard!</div>
+            <div class="options-container">
+                <div class="option-box">
+                    <i class="fas fa-user-plus option-icon"></i>
+                    <span>Add User</span>
+                </div>
+                <div class="option-box">
+                    <i class="fas fa-box option-icon"></i>
+                    <span>Add Product</span>
+                </div>
+                <div class="option-box">
+                    <i class="fas fa-tags option-icon"></i>
+                    <span>Add Category</span>
+                </div>
+                <div class="option-box">
+                    <i class="fas fa-user-shield option-icon"></i>
+                    <span>Add Admin</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

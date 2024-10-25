@@ -1,0 +1,62 @@
+/* Custom styles for the login page */
+.container {
+    margin-top: 50px;
+}
+
+.left-column {
+    background-image: url('food-delivery.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    min-height: 400px;
+}
+
+.right-column {
+    padding: 20px;
+}
+/* Add a background image with a gradient overlay */
+
+body {
+   
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 204, 204, 0.5)),
+                url(/Login/backgroundLogin.jpg); 
+    background-size: cover; /* Ensures the image covers the full area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating of the image */
+    background-attachment: fixed; /* Optional: Keeps the background fixed when scrolling */
+    border-radius: 40px; /* Adjust the px value for more or less curvature */
+}html, body {
+    height: 100%;
+   
+}/* Transparent Login Button */
+button {
+    background-color: transparent; /* Makes the background transparent */
+    border: 2px solid rgba(1, 1, 1, 0.8); /* Light border to make it visible */
+    color: #241d1d; /* Button text color */
+    padding: 10px 20px; /* Padding for better click area */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-size: 16px; /* Adjust font size as needed */
+    transition: background-color 0.3s, color 0.3s;
+     /* Smooth transition for hover effects */
+}
+
+/* Optional: Hover Effects */
+button:hover {
+    background-color: rgba(255, 204, 204, 0.6); /* Light background on hover */
+    color: white; /* Change text color on hover */
+}
+.navbar {
+    
+    padding: 0% 0%; /* Adjust this to decrease the padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
+}.forgot-password {
+    color: rgba(26, 26, 26, 0.8); /* Light white color */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Optional: Hover effect for the link */
+.forgot-password:hover {
+    color: rgba(255, 255, 255, 1); /* Fully white on hover */
+}

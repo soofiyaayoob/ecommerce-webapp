@@ -1,0 +1,89 @@
+/* Custom styles for the login page */
+.container {
+    margin-top: 50px;
+}
+
+
+
+body {
+   
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 204, 204, 0.5)),
+                url(/Login/backgroundLogin.jpg); 
+    background-size: cover; /* Ensures the image covers the full area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating of the image */
+    background-attachment: fixed; /* Optional: Keeps the background fixed when scrolling */
+    border-radius: 40px; /* Adjust the px value for more or less curvature */
+    
+}html, body {
+    height: 100%;
+   
+}/* Transparent Login Button */
+
+.navbar {
+    
+    padding: 0% 0%; /* Adjust this to decrease the padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
+}
+.registration-form {
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 600px; /* Increased the width */
+    margin: 0 auto; /* Horizontally center the form */
+    position: relative;
+
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* CSS Grid for two-column layout */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px; /* Space between the columns */
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Full-width button */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #cb7979;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Add space above the button */
+}
+
+button:hover {
+    background-color: rgba(255, 204, 204, 0.6);
+ color: white;
+}

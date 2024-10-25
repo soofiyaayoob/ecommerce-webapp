@@ -1,0 +1,161 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.search-container {
+    flex-grow: 1;
+    margin: 0 1rem;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Main container with sidebar and content */
+.main-container {
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 300px;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* Categories */
+.categories {
+    list-style: none;
+    padding: 0;
+}
+
+.category-item {
+    padding: 1rem;
+    background-color: #ddd;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 1rem;
+    background-color: #f4f4f4;
+    display: none;  /* Hidden by default */
+}
+
+.submenu li {
+    padding: 0.5rem;
+    background-color: #eee;
+    margin-bottom: 0.5rem;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column; /* Changed to column */
+    
+    font-size: 1.5rem;
+    
+}
+
+/* Ensure both sidebar and main-content have the same height */
+.main-container > .sidebar, 
+.main-container > .main-content {
+    height: 100%;
+}
+
+/* Welcome Note */
+.welcome-note {
+    margin-bottom: 3rem; /* Increased space */
+    text-align: center;
+}
+/* Options Container */
+
+    .options-container {
+        display: flex; /* Ensure options are in a row */
+        gap: 2rem; /* Space between option boxes */
+        justify-content: center; /* Center option boxes horizontally */
+      
+        flex-wrap: wrap; /* Allow wrapping of option boxes */
+
+    }
+    
+    .option-box {
+        display: flex; /* Align icon and text */
+        flex-direction: column; /* Stack icon and text */
+        align-items: center; /* Center icon and text */
+        padding: 1rem;
+        border: 1px solid #ccc; /* Optional: Add border for visibility */
+        border-radius: 8px; /* Optional: Rounded corners */
+        width: 170px; /* Optional: Fixed width for boxes */
+        transition: box-shadow 0.3s; /* Optional: Smooth shadow transition */
+    }
+    
+    .option-box:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow on hover */
+    }
+
+/* Option Icon */
+.option-icon {
+    width: 50px; /* Adjust the icon size */
+    height: 50px;
+    margin-right: 1rem; /* Space between icon and text */
+}
+
