@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Dynamic Icons</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/Home/home.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <!-- Logo and Brand Name -->
+            <img src="/Login/taam smaak.png" alt="Taam Smaak Logo" class="logo">
+            <span class="brand-name">Taam Smaak</span>
+        </div>
+        <div class="navbar-right">
+            <!-- Offers -->
+            <div class="nav-item" id="offers">
+                <i class="fas fa-tags icon"></i>
+                <span>Offers</span>
+            </div>
+            <!-- Menu -->
+            <div class="nav-item" id="menu">
+                <i class="fas fa-bars icon"></i>
+                <span>Menu</span>
+            </div>
+            <!-- Notifications -->
+            <div class="nav-item" id="notification-icon">
+                <i class="fas fa-bell icon"></i>
+            </div>
+            <!-- Cart -->
+            <div class="nav-item" id="cart">
+                <i class="fas fa-shopping-cart icon"></i>
+            </div>
+            <!-- Wishlist -->
+            <div class="nav-item" id="wishlist">
+                <i class="fas fa-heart icon"></i>
+            </div>
+            <!-- Profile -->
+            <div class="nav-item" id="profile">
+                <i class="fas fa-user icon"></i>
+            </div>
+        </div>
+    </nav>
+    <div id="notification-content" class="notification-content">
+        Welcome to Notifications!
+    </div>
+
+    <div id="profile-content" class="profile-content">
+        <div class="profile-header">
+            <i class="fas fa-user-circle profile-icon"></i> 
+            <div class="profile-details">
+                <p><strong>Name: John Doe</strong></p>
+                <p>Email: johndoe@example.com</p>
+                <p>Phone: +123456789</p>
+            </div>
+        </div>
+        <div class="profile-buttons">
+            <button id="change-details" class="transparent-button">Change Details</button>
+            <button id="address-button" class="transparent-button">Address</button>
+            <button id="orders-button" class="transparent-button">Orders</button>
+        </div><br><br><br>
+        <small>You are a special user of mine!</small>
+    </div>
+    <div id="offerCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-caption">
+                    <h2>Offer 1: Get 20% Off on Your First Order!</h2>
+                    <button class="btn-offer" onclick="window.location.href='offer.html'">See Offers</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-caption">
+                    <h2>Offer 2: Free Delivery on Orders Over $50!</h2>
+                    <button class="btn-offer" onclick="window.location.href='offer.html'">See Offers</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-caption">
+                    <h2>Offer 3: Buy One Get One Free on Select Items!</h2>
+                    <button class="btn-offer" onclick="window.location.href='offer.html'">See Offers</button>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#offerCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#offerCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    
+    
+  
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/Home/home.js"></script>
+</body>
+</html>

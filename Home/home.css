@@ -1,0 +1,219 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdfdfd;
+    padding: 10px 20px;
+    color: rgb(17, 16, 16);
+    border: 2px solid #c8c7c0; /* Adds a border to the navbar */
+    border-radius: 8px; /* Adds rounded corners to the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a slight shadow for depth */
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left .logo {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-left .brand-name {
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-item .icon {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.nav-item:hover {
+    color: #ffcc00;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    .navbar-right {
+        gap: 10px;
+    }
+}
+.notification-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    z-index: 1000;
+    width: 300px;
+}
+
+.notification-content.show, .profile-content.show {
+    display: block; /* Show dropdown when toggled */
+}
+
+.profile-header {
+    display: flex; /* Use flexbox to arrange icon and details */
+    align-items: center; /* Center items vertically */
+    margin-top: 30px;
+}
+
+.profile-icon {
+    font-size: 60px; /* Size of the Font Awesome icon */
+    color: #555; /* Change the color of the icon */
+    margin-right: 15px; /* Space between icon and text */
+}
+
+.profile-details {
+    flex-grow: 1; /* Allow details to take up remaining space */
+}
+
+.profile-content button {
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+.profile-content p {
+    margin: 5px 0;
+}
+/* Button Styles */
+.transparent-button {
+    background-color: transparent;
+    border: none;
+    color: #333; /* Change to desired text color */
+    cursor: pointer;
+    width: 100%; /* Make the button the full width of the parent */
+    text-align: left; /* Align text to the left */
+    padding: 10px 0; /* Add padding for better click area */
+    font-size: 16px; /* Adjust font size if needed */
+    border: 2px solid #c8c7c0; /* Adds a border to the navbar */
+    border-radius: 8px; /* Adds rounded corners to the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a slight shadow for depth */
+
+}
+
+.transparent-button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Optional hover effect */
+}
+
+.profile-content {
+    display: none;
+    position: absolute;
+    top: 40px;  /* Position it below the navbar */
+    right: 10px; /* Align it to the right of the navbar */
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1000;
+    max-width: 300px; /* Set a max width instead of a fixed width */
+    width: auto; /* Allow it to take the width of the content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Add this to handle overflow if needed */
+    height: auto; /* Allow it to adjust its height automatically */
+    min-height: 200px; /* Set a minimum height */
+}
+.profile-buttons {
+    
+    margin-top: 50px; /* Space above the buttons */
+    display: flex; /* Use flexbox to arrange buttons */
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Adjust spacing between buttons */
+
+}
+
+/* Specific background images for each item */
+.carousel-item:nth-child(1) {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4), 
+        rgba(65, 60, 60, 0.4)
+    ),
+    url('/Home/images/hero-bg.jpg');
+    background-size: cover; /* Cover the entire area */
+    background-repeat: no-repeat; /* No repeat */
+    background-position: center; /* Center the image */
+}
+   
+.carousel-item:nth-child(2) {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4), 
+        rgba(0, 0, 0, 0.4)
+    ),
+    url('/Home/images/choc2.jpg');
+    background-size: cover; /* Cover the entire area */
+    background-repeat: no-repeat; /* No repeat */
+    background-position: center; /* Center the image */
+}
+   
+.carousel-item:nth-child(3) {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4), 
+        rgba(0, 0, 0, 0.4)
+    ),
+    url('/Home/images/pizza.jpg');
+    background-size: cover; /* Cover the entire area */
+    background-repeat: no-repeat; /* No repeat */
+    background-position: center; /* Center the image */
+}
+   
+
+
+.carousel-item {
+    height: 600px; /* Increased height for the carousel items */
+    position: relative; /* Ensure that carousel item is positioned */
+}
+
+.carousel-item img {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the entire area */
+}
+
+
+.carousel-caption {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center using transform */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(179, 169, 169); /* Text color */
+    gap: 20px; /* Control space between h2 and button */
+}
+
+.carousel-caption h2 {
+    margin-bottom:-2px; /* Remove any default margin */
+    color: rgb(179, 169, 169); /* Text color */
+}
+
+
+.btn-offer {
+    margin-top: 20px; /* Space above the button */
+    color: rgb(180, 166, 166); /* Button text color */
+    background-color: rgb(65, 23, 23); /* Transparent background */
+    border: 1px solid rgb(53, 31, 31); /* Optional border */
+    padding: 10px 20px; /* Padding for button */
+    cursor: pointer; /* Pointer on hover */
+    border: 2px solid #2c1b1b; /* Adds a border to the navbar */
+    border-radius: 8px; /* Adds rounded corners to the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a slight shadow for depth */
+
+}
