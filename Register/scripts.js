@@ -47,33 +47,32 @@ document.addEventListener('DOMContentLoaded', () => {
         if (validateForm(data)) {
             fetch('http://localhost:8080/register', {
                 method: 'POST',
-                credentials: 'include',
+                credentials: "include",
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(data)
             })
             .then(response => {
-                console.log("Response status:", response.status);
                 if (!response.ok) {
-                    return response.json().then(errorData => {
-                        throw new Error(errorData.message || "Network response was not ok");
+                    return response.text().then(text => {
+                        throw new Error(`HTTP error! status: ${response.status}, message: ${text}`);
                     });
                 }
                 return response.json();
             })
-            .then(result => {
-                console.log("Server response:", result);
-                if (result.success) {
-                    // Redirect to OTP page if registration is successful
-                    window.location.href = 'otp.html';
-                } else {
-                    alert('Registration failed: ' + result.message);
-                }
+            .then(data => {
+                console.log(data);
+                // You may want to display a success message to the user here
+                alert("Registration successful!");
+                
+                // Redirect to otp.html
+                window.location.href = "Login/login.html"; // Redirect to OTP page
             })
             .catch(error => {
-                console.error('Error:', error);
-                alert('An error occurred: ' + error.message);
+                console.error("Error:", error);
+                // Display a user-friendly error message
+                alert("An error occurred during registration: " + error.message);
             });
         }
     });

@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     };
 
     // Call the login API
-    fetch('/api/login', {
+    fetch('http://localhost:8080/perform_login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
