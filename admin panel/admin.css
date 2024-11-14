@@ -163,6 +163,7 @@ body {
 .product-form input, .product-form textarea, .product-form select, .product-form button {
     width: 100%;
     margin-top: 0.5rem;
+  
 }
 
 .product-form button {
@@ -187,6 +188,9 @@ body {
     width: 100%;
     margin-top: 0.5rem; /* Adds space above each element */
     height: 40px;
+    
+
+    
 }
 .add-product-button {
     background-color: black;  /* Set button background color to black */
@@ -328,3 +332,4 @@ body {
     z-index: 1000;
     width: 600px;  /* Increased width */
 }
+
